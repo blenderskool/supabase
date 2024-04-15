@@ -14,7 +14,6 @@ const supabase = createClient<Database>(
   Deno.env.get("SUPABASE_URL")!,
   Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
 );
-// @ts-ignore TODO: import Supabase AI types.
 const model = new Supabase.ai.Session("gte-small");
 
 Deno.serve(async (req) => {
